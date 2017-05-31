@@ -13,7 +13,7 @@ o888o   o888o o888ooooood8 o888o  o888o o88o     o8888o  `Y8bood8P'  o888ooooood
 %%%%%%%%%%%%%%%%     Photogrammetry and Geomatics Group, ICube UMR 7357 INSA Strasbourg    %%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%                  Contact: arnadi.murtiyoso@insa-strasbourg.fr             %%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%                         https://github.com/murtiad                        %%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%                       Last update: 30 May 2017 (v0.1)                     %%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%                       Last update: 31 May 2017 (v0.1)                     %%%%%%%%%%%%%%%%
 ===========================================================================================================
 
 Objective: performs various processing algorithms to point clouds in the interest of generating HBIMs (Heritage Building Information Models).
@@ -23,6 +23,13 @@ Required dependencies:
 - libLAS (https://www.liblas.org/)
 
 Change log:
-v0.1 (30 May 2017):
+v0.1:
+30 May 2017:
 - integrated las2pcd into HERACLES
 - integrated PARVIS into HERACLES
+- create ROSACE (Ransac Object SegmentAtion Clearly simplE) as a function
+
+31 May 2017:
+- integrated ROSACE into HERACLES: enables simple RANSAC-based plane segmentation on .las and .pcd point clouds
+- modified las2pcd in HERACLES to not generate a .pcd file, but rather keeps it in the cloud variable
+- modified PARVIS to enable direct reading of .las files
