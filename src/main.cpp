@@ -5,6 +5,7 @@
 #include "las2pcd.h"
 #include "PARVIS.h"
 #include "ROSACE.h"
+#include "PIER.h"
 
 using namespace std;
 using namespace pcl;
@@ -27,6 +28,7 @@ int main (int argc, char** argv)
 	cout << "Welcome! What would you like to do?" << endl;
 	cout << "las2pcd	-- Converts .las point clouds into PCL-friendly format .pcd" << endl;
 	cout << "parvis	-- Simple .las or .pcd point cloud visualizer" << endl;
+	cout << "pier	-- Poisson-based surface reconstruction" << endl;
 	cout << "rosace	-- RANSAC-based plane segmentation" << endl;
 	cout << "exit	-- Exits the program" << endl;
 	cout << "Your choice : ";
@@ -58,10 +60,18 @@ int main (int argc, char** argv)
 	else if (choice == "rosace")
 	{
 		cout << endl;
-		cout << "Enter full .pcd file path: (or you can also drag the file here)" << endl;
+		cout << "Enter full .las or .pcd file path: (or you can also drag the file here)" << endl;
 		getline(cin, filePath);
 
 		rosace(filePath);
+	}
+	else if (choice == "pier")
+	{
+		cout << endl;
+		cout << "Enter full .las or .pcd file path: (or you can also drag the file here)" << endl;
+		getline(cin, filePath);
+
+		pier(filePath);
 	}
 	else if (choice == "exit")
 	{
