@@ -27,9 +27,15 @@ v0.1:
 30 May 2017:
 - integrated las2pcd into HERACLES
 - integrated PARVIS into HERACLES
-- create ROSACE (Ransac Object SegmentAtion Clearly simplE) as a function
+- created ROSACE (Ransac Object SegmentAtion Clearly simplE) as a function
 
 31 May 2017:
-- integrated ROSACE into HERACLES: enables simple RANSAC-based plane segmentation on .las and .pcd point clouds
+- integrated ROSACE into HERACLES
 - modified las2pcd in HERACLES to not generate a .pcd file, but rather keeps it in the cloud variable
 - modified PARVIS to enable direct reading of .las files
+
+1 June 2017:
+- created PIER (PoIsson surfacE Reconstruction) and tested with several datasets and normal computation approaches
+- converted PIER into a function, added las2pcd functionality
+- integrated PIER into HERACLES
+
