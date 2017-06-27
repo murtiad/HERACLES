@@ -4,8 +4,8 @@ project(HERACLES)
 find_package(PCL 1.2 REQUIRED)
 
 include_directories(${PCL_INCLUDE_DIRS})
-include_directories(E:/These_Murtiyoso/2017/03_C++/MSVC_2010/Dep/liblas/include)
-include_directories(E:/These_Murtiyoso/2017/03_C++/MSVC_2010/HERACLES/headers)
+include_directories(../../Dep/liblas/include)
+include_directories(../headers)
 
 link_directories(${PCL_LIBRARY_DIRS})
 
@@ -19,6 +19,6 @@ add_executable(HERACLES main.cpp
 
 target_link_libraries(HERACLES 
 ${PCL_LIBRARIES}
-E:/These_Murtiyoso/2017/03_C++/MSVC_2010/Dep/liblas/lib/liblas.lib
-E:/These_Murtiyoso/2017/03_C++/MSVC_2010/Dep/liblas/lib/liblas_c.lib
+../../Dep/liblas/lib/liblas
+../../Dep/liblas/lib/liblas_c
 )
