@@ -15,7 +15,11 @@ add_executable(HERACLES main.cpp
 			las2pcd.cpp
 			PARVIS.cpp
 			ROSACE.cpp
-			PIER.cpp)
+			PIER.cpp
+			KEYSTON.cpp
+			FENTON.cpp
+			CORDON.cpp
+			normal.cpp)
 
 target_link_libraries(HERACLES 
 ${PCL_LIBRARIES}
